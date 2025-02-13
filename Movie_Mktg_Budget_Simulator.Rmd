@@ -1,0 +1,631 @@
+---
+title: "Movie Marketing Budget Simulator"
+author: "Prof. Sudhir Voleti"
+date: "2025-01-15"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Strategic Challenge : Optimizing Movie Marketing ROI 
+
+Sarah Richardson, newly appointed Head of Strategic Marketing at Paramount Pictures, faces a critical Q4 initiative - maximizing ROI on a mid-budget thriller 'Market Makers' ($35M production cost) in an increasingly competitive theatrical landscape. With streaming platforms eroding traditional audience segments and rising CPM rates across digital channels, Richardson must optimize her $12M marketing allocation to deliver against aggressive KPIs:
+
+20% ROI on opening weekend
+Minimum 2,500 screens secured for initial release
+Sub-$5 customer acquisition cost across marketing channels
+15% market share in the key 25-34 demographic
+
+Leveraging the Marketing Budget Simulator's predictive analytics capabilities, Richardson implements a data-driven approach to:
+
+Model revenue decay patterns across competitive release windows
+Optimize channel mix between traditional media (declining but stable 30% week-over-week retention) versus digital platforms (higher CPM but enhanced targeting)
+A/B test budget allocation scenarios between influencer marketing (strong engagement but uncertain conversion) versus proven PR channels
+Project screen count elasticity based on first-weekend performance metrics
+
+With theater chains demanding minimum marketing commitments and studio executives scrutinizing every dollar of marketing spend, the simulator enables Richardson to defend her strategic decisions with quantifiable projections and industry-standard metrics.
+
+```{r backstory, echo=FALSE}
+
+```
+
+## Technical Implementation with LLM Assitance.
+
+Sarah is a tech-inclined marketing professional. She prefers having a predictive analytical tool for marketing budget simulation. Though she lacks coding expertise to build this tool ground up, she is adept on working with LLMs and hence she prefers Claude to build an R shiny application for the use case. Below is the meta prompt she inputs to Claude.
+
+```{r prompt_image, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt_sarah.jpg')
+```
+
+## Sarah has now implemented the R code and this is how the final output looks like :
+
+```{r simulator_first_image, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('simulator_op1.jpg')
+```
+
+```{r simulator_second_image, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('simulator_op2.jpg')
+```
+
+```{r simulator_third_image, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('simulator_op3.jpg')
+```
+
+#### Now imagine yourself as a newly appointed as a Strategic Marketing Professional With no to minimal coding ability at your disposal, you too can leverage the intelligence of LLMs to build applications ground up. Now taking inspiration from Sarah's Claude, why don't you try building a "Movie Marketing Budget Simulator using LLM" using R shiny. 
+
+
+
+## Once you execute the prompt, copy paste it either on R studio downloaded locally or on posit cloud. Some snippets of the code : 
+
+```{r code_rstudio, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('code_rstudio.jpg')
+```
+
+```{r code_rstudio1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('code_rstudio1.jpg')
+```
+
+```{r code_rstudio2, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('code_rstudio2.jpg')
+```
+
+```{r code_rstudio3, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('code_rstudio3.jpg')
+```
+
+```{r code_rstudio4, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('code_rstudio4.jpg')
+```
+
+## Understanding the application architecture : Key components and Functionality.
+
+1.Interface Design & User Experience :
+-Dashboard Layout & Navigation
+-Input Parameter Configuration
+-Interactive Elements & Controls
+
+
+2.Budget Allocation Engine :
+-Channel Distribution Logic
+-Allocation Constraints
+-Real-time Budget Calculations
+
+
+3.Revenue Projection Models :
+-Weekly Decay Rate Implementation
+-Screen Count Dynamics
+-Box Office Performance Metrics
+
+
+4.KPI Framework :
+-ROI Calculations
+-Performance Metrics
+-Marketing Efficiency Indicators
+
+
+5.Data Visualization & Reporting :
+-Interactive Charts & Graphs
+-Dynamic KPI Dashboard-
+-Executive Summary Metrics
+
+
+6.Business Logic Implementation :
+-Revenue Decay Patterns
+-Screen Count Elasticity
+-Marketing Channel Effectiveness
+-Budget Optimization Rules
+
+
+## Code Walkthrough : 
+
+#### Libraries : 
+```{r libraries, echo=FALSE, out.width = "500px"}
+knitr::include_graphics('libraries.jpg')
+```
+
+We import libraries at the beginning for building any application.These libraries work seamlessly together to create a professional-grade application
+
+
+-shiny: The foundation library that enables interactive web application development in R.
+-shinydashboard: Provides professional-looking dashboard components essential for our executive-friendly interface
+-DT: Powers our KPI tables, enabling interactive sorting and formatting of key metrics
+-ggplot2: Provides robust graphing capabilities for data visualization
+-dplyr: Handles data transformations for budget calculations and revenue projections
+
+------------------------------------------------------------------------------
+
+#### Dashboard Header : 
+```{r dashboard_header_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('dashboard_header_code.jpg')
+```
+
+```{r dashboard_header, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('dashboard_header.jpg')
+```
+
+Application Framework & Interface:
+Creates professional dashboard structure with header and title
+Implements intuitive sidebar navigation with clean, executive-friendly design
+
+
+Strategic Workflow Design:
+Organizes tool into three logical steps: Parameters → Budget → Projections
+Maps directly to marketing executives' decision-making process
+
+
+User Experience Enhancement:
+Features clear icons (sliders, dollar sign, charts) for visual navigation
+Creates intuitive, non-technical interface for business users
+
+
+Technical Architecture:
+Uses unique tab identifiers to connect UI with backend functionality
+Enables seamless data flow between different sections of the simulator
+
+
+Business-Centric Design:
+Aligns with standard movie marketing workflow and KPI tracking
+Optimized for executive presentations and stakeholder meetings
+
+
+------------------------------------------------------------------------------
+
+#### Input Parameters tab : 
+```{r inputparams_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('inputparams_code.jpg')
+```
+
+```{r inputparams_tab, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('inputparams.jpg')
+```
+
+Layout Structure:
+Uses dashboardBody and fluidRow for responsive design
+Creates a clean box component taking half the width (width = 6)
+Ensures optimal viewing across different screen sizes
+
+
+Essential Movie Parameters:
+
+Captures four critical movie attributes:
+Movie Name (text input)
+Genre (dropdown selection)
+Release Date (calendar picker)
+Production Budget (numeric input with validation)
+
+
+Input Validation & Constraints:
+Sets minimum value of 0 for production budget
+Provides structured genre choices to ensure data consistency
+Implements standardized date format for release planning
+
+
+Business Intelligence Design:
+Genre selection aligns with standard industry categories
+Production budget input helps establish marketing budget ratios
+Release date enables seasonal performance modeling
+
+
+UI/UX Considerations:
+Groups related inputs logically under "Movie Details"
+Provides clear, labeled fields for intuitive data entry
+Combines different input types (text, select, date, numeric) for optimal user experience
+
+
+------------------------------------------------------------------------------
+
+#### Creating Distribution Strategy Box : 
+```{r dist_strategy_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('dist_strat_code.jpg')
+```
+
+```{r dist_strategy_tab, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('dist_strategy.jpg')
+```
+
+
+5 key points explaining the Distribution Strategy box section:
+
+Screen Allocation Planning:
+Enables week-by-week screen count planning
+Default values reflect typical industry patterns (1000 → 800 screens)
+Sets minimum validation (min = 0) to prevent invalid entries
+Critical for revenue modeling and reach estimation
+
+
+Pricing Strategy:
+Captures average ticket price with industry-standard default ($12)
+Enables revenue calculations when combined with screen count
+Essential for ROI and audience reach projections
+
+
+Release Strategy Options:
+Offers three standard industry release approaches:
+Wide Release (maximum initial exposure)
+Limited Release (targeted rollout)
+Platform Release (gradual expansion)
+
+
+Aligns with different budget scales and marketing objectives:
+Layout Integration
+Matches Movie Details box width (width = 6)
+Creates balanced, symmetrical interface
+Maintains professional dashboard appearance
+
+
+Strategic Value:
+Combines crucial distribution metrics in one section
+Enables sophisticated revenue modeling
+Supports different release strategies from blockbusters to indie films
+Facilitates "what-if" scenario planning for different distribution approaches
+
+
+------------------------------------------------------------------------------
+
+#### Creating Target Audience Box : 
+```{r target_audience_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('target_audience_code.jpg')
+```
+
+```{r target_audience_tab, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('target_audience_box.jpg')
+```
+
+5 key points explaining the Target Audience box section:
+
+Demographic Targeting Tools:
+Implements dual-ended slider for age range selection (0-80 years)
+Default range (15-45) reflects typical movie-going audience
+Enables precise audience segmentation for marketing planning
+
+
+Audience Segment Selection:
+
+Provides checkbox group for key demographic segments:
+Students
+Young Professionals
+Families
+Senior Citizens
+
+
+Allows multiple segment selection for diverse targeting
+
+Competitive Analysis Integration:
+Competition level dropdown (High/Medium/Low)
+Influences marketing strategy and budget allocation
+Supports market positioning decisions
+
+
+UI Design Choices:
+Uses slider for intuitive age range selection
+Implements check boxes for multi-select capability
+Maintains consistent width (width = 6) for layout harmony
+
+
+Strategic Marketing Value:
+Combines demographics with competition assessment
+Enables targeted marketing channel selection
+Supports audience-specific budget allocation decisions
+Facilitates marketing mix optimization based on target segments
+
+
+------------------------------------------------------------------------------
+
+#### Creating Performance Targets Box : 
+```{r pftargets_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('pf_target_code.jpg')
+```
+
+```{r pftargets_tab, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('pf_target.jpg')
+```
+
+
+5 key points explaining the Performance Targets box section:
+
+Revenue Timeline Planning
+
+Captures three critical revenue milestones:
+First weekend revenue (default $500,000)
+Second weekend revenue (default $300,000)
+Total box office target (default $2M)
+
+Reflects industry-standard revenue decay pattern
+
+Target Validation & Constraints:
+Sets minimum value of 0 for all targets
+Default values show typical revenue progression
+Second weekend defaults lower than first (reflecting standard drop-off)
+Total target accommodates extended run projections
+
+
+Performance Metrics Structure:
+Focuses on weekend performance (crucial for movie success)
+Enables tracking against industry benchmarks
+Provides basis for ROI calculations
+
+
+Interface Consistency:
+Maintains half-width layout (width = 6)
+Uses consistent numeric input format
+Provides clear "$" indicators for financial values
+
+
+Strategic Planning Value:
+Establishes clear performance benchmarks
+Facilitates goal-setting and expectation management
+Enables comparison of projections vs. targets
+Supports marketing budget justification based on revenue goals
+
+
+------------------------------------------------------------------------------
+
+#### Creating Budget Allocations Tab : 
+```{r budget_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('budget_code.jpg')
+```
+
+```{r budget_pie_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('budget_pie_code.jpg')
+```
+
+```{r budget_tab1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('budget_tab1.jpg')
+```
+
+```{r budget_tab2, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('budget_tab2.jpg')
+```
+
+
+Here are 5 key points explaining the Budget Allocation tab section:
+
+Budget Layout & Structure:
+Full-width design (width = 12) for comprehensive budget view
+Split layout: Total budget input (4 columns) + Channel allocation (8 columns)
+Default total marketing budget set at $500,000 with minimum validation
+
+
+Channel Allocation Controls:
+
+Interactive sliders for five key marketing channels:
+
+Digital Marketing (30% default)
+Traditional Advertising (25% default)
+PR & Events (20% default)
+Influencer Marketing (15% default)
+Miscellaneous (10% default)
+
+
+Percentages reflect modern marketing mix priorities
+
+
+Budget Visualization:
+Implements interactive pie chart using plotlyOutput
+Provides real-time visual feedback on allocation changes
+Enables immediate understanding of budget distribution
+
+
+User Interface Design:
+Slider controls for intuitive percentage adjustment
+Range constraints (0-100%) prevent invalid allocations
+Visual connection between inputs and pie chart visualization
+
+
+Strategic Value:
+Facilitates quick scenario testing of different budget mixes
+Default allocations reflect industry benchmarks
+Real-time updates help optimize channel mix
+Enables data-driven conversations with stakeholders about budget priorities
+
+
+------------------------------------------------------------------------------
+
+#### Creating Projections Box : 
+```{r projections_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('projections_code.jpg')
+```
+
+```{r projections_tab, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('projections_tab.jpg')
+```
+
+
+5 key points explaining the Projections tab section:
+
+Layout Architecture:
+Two full-width boxes (width = 12) for maximum data visibility
+Hierarchical display: Revenue chart followed by KPI metrics
+Clean, executive-friendly dashboard layout
+
+
+Revenue Visualization Components:
+Uses plotlyOutput for interactive revenue projection chart
+revenue_projection_chart connects to server-side calculations
+Enables week-by-week revenue tracking and screen count correlation
+
+
+KPI Integration:
+Implements DataTable (DTOutput) for key performance metrics
+kpi_table links to server-side KPI calculations
+Presents critical metrics in scannable format
+
+
+Business Intelligence Display:
+Combines visual (chart) and numerical (KPI) insights
+Supports both trend analysis and specific metric tracking
+Facilitates performance monitoring against targets
+
+
+Strategic Reporting Value:
+Provides comprehensive view of projected performance
+Enables quick identification of potential issues
+Supports data-driven decision making
+Perfect for executive presentations and stakeholder reviews
+
+
+------------------------------------------------------------------------------
+
+#### Understanding Budget Calculations : 
+```{r budgetcalc_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('budgetcalc_code.jpg')
+```
+
+```{r budgetcalc_1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('budgetcalc_1.jpg')
+```
+
+5 key points explaining the Budget Calculation server logic:
+
+Reactive Data Structure
+
+Creates reactive data frame that updates automatically with user inputs
+Maintains five standard marketing categories
+Links UI inputs directly to budget calculations
+Ensures real-time responsiveness to user changes
+
+
+Budget Calculation Logic
+CopyAmount = category * total_marketing_budget / 100
+
+Converts percentage inputs to dollar amounts
+Example: If total budget is $500,000 and digital marketing is 30%
+Calculation: $500,000 * 30/100 = $150,000 for digital marketing
+
+
+Data Organization:
+
+Creates three-column structure:
+Category (marketing channels)
+Percentage (user input values)
+Amount (calculated dollar values)
+
+
+Enables both percentage and absolute value tracking
+
+
+Visualization Integration:
+Uses plotly to create interactive pie chart
+Maps Categories to labels
+Maps calculated Amounts to values
+Automatically updates with data changes
+
+
+Business Analytics Value:
+Enables real-time budget allocation visualization
+Facilitates quick scenario testing
+Shows both percentage splits and actual amounts
+Supports budget optimization decisions
+
+
+-----------------------------------------------------------------------
+
+#### Understanding Revenue Projections Calculation : 
+```{r revproj_code, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('revproj_code.jpg')
+```
+
+```{r revproj_code1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('revproj_code1.jpg')
+```
+
+```{r revproj_code2, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('revproj_code2.jpg')
+```
+
+```{r KPI1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('kpi1.jpg')
+```
+
+
+1.Revenue Decay Model:
+base_revenue <- input$target_weekend1
+decay_rate <- 0.7  # 30% weekly decay
+projected_revenue <- base_revenue * decay_rate^(weeks-1)
+
+Calculation Example:
+
+-If opening weekend (base_revenue) = $100,000
+-Week 1: $100,000 * 0.7^(1-1) = $100,000 (no decay)
+-Week 2: $100,000 * 0.7^1 = $70,000 (30% drop)
+-Week 3: $100,000 * 0.7^2 = $49,000 (another 30% drop)
+
+
+2.Screen Count Modeling
+
+Screens = c(input$screens_week1,  
+            input$screens_week2,  
+            rep(input$screens_week2 * 0.8, 6))
+            
+Screen Distribution Logic:
+-Week 1: Maximum screens (e.g., 1000)
+-Week 2: First drop (e.g., 800)
+-Weeks 3-8: Stabilized at 80% of Week 2 (e.g., 640)
+
+
+3.Visualization Integration
+output$revenue_projection_chart <- renderPlotly({
+  plot_ly(revenue_projection(), x = ~Week) %>%
+    add_lines(y = ~Revenue, name = "Projected Revenue") %>%
+    add_bars(y = ~Screens, name = "Screen Count", yaxis = "y2")
+    
+-Combines revenue line chart with screen count bar chart
+-Dual y-axis for comparing trends
+-Interactive hover details
+
+4.KPI Calculations
+
+- Marketing Cost per Screen:
+Measures efficiency of marketing spend per theater screen
+Calculation: Total Marketing Budget ÷ Week 1 Screen Count
+Example: $500,000 marketing budget ÷ 1000 screens = $500 per screen
+Helps assess marketing efficiency in theater acquisition
+
+
+- Expected First Weekend ROI:
+Measures return on marketing investment for opening weekend
+Calculation: ((Target Weekend Revenue ÷ Marketing Budget) - 1) × 100
+Example: 
+If target is $600,000 and marketing budget is $500,000
+($600,000 ÷ $500,000) - 1 = 0.2
+0.2 × 100 = 20% ROI
+
+Negative values indicate potential losses
+
+- Marketing Budget % of Production Budget:
+Shows marketing spend as percentage of production cost
+Calculation: (Marketing Budget ÷ Production Budget) × 100
+Example: $500,000 marketing ÷ $5,000,000 production = 10%
+Industry benchmark: typically 25-50% for major releases
+
+
+- Expected Total Revenue:
+Sums up projected revenue across all 8 weeks
+Accounts for weekly decay rate (30% drop)
+Example: Week 1: $100K + Week 2: $70K + Week 3: $49K + ...
+Used for overall profitability assessment
+
+
+- Marketing Cost per Expected Viewer:
+Measures customer acquisition cost
+Calculation: Marketing Budget ÷ (Total Revenue ÷ Ticket Price)
+
+Example: 
+If total revenue is $1M and ticket price is $10:
+Expected viewers = $1,000,000 ÷ $10 = 100,000 viewers
+Marketing cost per viewer = $500,000 ÷ 100,000 = $5 per viewer
+Critical for assessing marketing efficiency
+
+
+5.Business Intelligence Implementation
+
+Real-time KPI updates based on user inputs
+Industry-standard metrics for decision making
+Formatted output with proper currency and percentage displays
+Interactive table for easy metric comparison
+
+
+
+
