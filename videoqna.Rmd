@@ -1,0 +1,195 @@
+---
+title: "Video Q and A Agent"
+author: "Prof. Sudhir Voleti"
+date: "2025-01-31"
+---
+
+```{r strategic_challenge, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Enhancing Decision Intelligence by creating "Video Ad Intelligence Platform" : A no-code LLM approach
+
+-----------------------------------------------------------------------------------
+
+### Strategic Challenge : Revolutionizing Video Ad Analysis Through AI-Powered Q&A
+
+Ashwin Iyer, a newly appointed Creative Director at Grey Advertising, faces a critical challenge in Q1 2025 - transforming how the agency analyzes video advertising content for their Fortune 500 clients. With production costs averaging $250,000 per commercial and mounting pressure for faster insights, Chen must revolutionize the agency's traditional ad testing approach to meet three key targets:
+
+Cut analysis turnaround time from 2 weeks to 24 hours
+Reduce pre-testing costs by 65% per campaign
+Achieve 85% client satisfaction with creative insights
+
+The stakes are particularly high as Grey competes for a $50M automobile account. Traditional focus group testing at $45,000 per round is proving too expensive and slow for modern production timelines. 
+
+Ashwin needs a solution that enables them to perform : 
+
+1.Instant AI-powered Q&A for video ads
+
+2.Real-time brand message consistency checks
+
+3.Quick competitive analysis and cultural sensitivity screening
+
+4.Data-driven creative optimization
+
+Leveraging the Video Ad Intelligence Platform's AI capabilities, Chen implements a transformative approach to creative optimization:
+Current Campaign Challenge: Luxury Auto Launch
+For a new luxury SUV launch, Ashwin's team uploads the initial 60-second spot and uses the AI Q&A system to analyze:
+
+Brand Message Alignment:
+Q: "At which timestamps does the sustainability message appear?"
+
+Visual Impact Assessment:
+Q: "Which scenes have the highest visual impact?"
+Q: "Are there any frames where the product features are unclear?"
+
+Cultural Sensitivity:
+Q: "Does this ad contain any elements that might be problematic in Asian markets?"
+Q: "How does the lifestyle portrayal align with our target demographic?"
+
+Competitive Differentiation:
+Q: "How does our feature showcase compare to Competitor X's recent campaign?"
+Q: "What unique visual elements distinguish our ad?"
+
+The implementation marks a fundamental shift from subjective to objective ad analysis, enabling Grey to:
+
+1.Reduce revision cycles by 60%
+
+2.Cut pre-testing costs by $30,000 per campaign
+
+3.Accelerate client approval processes by 75%
+
+4.Provide instant answers to client queries about ad content
+
+
+```{r technical implementation, echo=FALSE}
+
+```
+
+## Technical Implementation with LLM Assitance.
+
+Ashwin is a tech-savvy marketing executive who recognizes the transformative potential of AI in advertising analysis. While he doesn't possess traditional coding skills to build complex applications from scratch, he has become proficient at leveraging Large Language Models for creative problem-solving. Seeking a tool that could revolutionize video ad analysis through automated Q&A capabilities, Ashwin turns to advanced LLMs to help construct a Streamlit-based application. Though he can't write Python code independently, he understands the core concepts of multimodal AI analysis and uses this knowledge to effectively prompt LLMs in building a video analysis tool that matches his vision. Below is the meta prompt he crafts to guide the AI in creating an application that allows his team to upload video ads and perform detailed content analysis through natural language queries.
+
+
+```{r vision, echo=FALSE}
+
+```
+
+## How does Ashwin visualize the end product of Video Q and A to look like: 
+
+```{r vision_image1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('vision1.jpg')
+```
+
+
+```{r vision_image2, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('vision2.jpg')
+```
+
+
+
+```{r vision_image03, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('vision03.jpg')
+```
+
+
+```{r vision_image04, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('vision04.jpg')
+```
+
+## Ashwin decides to use Claude LLM to build this application . He uses the following set of prompts to build the application iteratively.
+
+#### He starts crafting a prompt in order to build a basic video management framework 
+
+
+```{r prompt1, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt1.jpg')
+```
+
+#### After successfully implementing the basic video upload functionality, Ashwin realized the need for proper video processing and storage management to handle the agency's high-quality ad content
+
+```{r prompt2, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt2.jpg')
+```
+
+#### The platform could now handle video files efficiently, but Ashwin envisioned more than just a video management system. His team needed intelligent insights from their ad content, leading him to explore AI integration...The platform could now handle video files efficiently, but Ashwin envisioned more than just a video management system. His team needed intelligent insights from their ad content, leading him to explore AI integration process. 
+
+```{r prompt3, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt3.jpg')
+```
+
+#### While testing the AI analysis features, Ashwin noticed his team had the same question: 'How do we actually ask it about our ads?' This sparked the next phase of development.
+
+
+```{r prompt4, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt4.jpg')
+```
+
+#### While the basic Q&A functionality proved useful, Ashwin's conversations with account managers revealed a need for deeper analytical capabilities. They wanted to connect their video analysis with broader market insights.
+
+
+```{r prompt5, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt5.jpg')
+```
+
+
+#### With the advanced analysis features in place, Ashwin turned his attention to an equally crucial aspect: making the tool feel as sophisticated as the insights it delivered. After all, in the advertising world, presentation is everything.
+
+
+```{r prompt6, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt6.jpg')
+```
+
+
+#### Late one evening, as Ashwin watched his team successfully use the platform to rescue a challenging client presentation - delivering instant insights about ad performance and competitive positioning - he had a moment of clarity. All the pieces were there, but they needed to be woven together into something greater: a seamless, production-ready platform that could transform how their agency approached video analysis. With renewed purpose, he drafted the final integration requirements.
+
+
+```{r prompt7, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt7.jpg')
+```
+
+```{r prompt7a, echo=FALSE, out.width = "800px"}
+knitr::include_graphics('prompt7a.jpg')
+```
+
+#### Please note : 
+
+Ashwin decided to implement this end-to-end in python and UI preferred streamlit. 
+Make sure to feed this in your input prompt while building it using LLM. 
+Else you can also build this using R shiny framework.
+
+
+### Try this out on Google Collab Notebook (python implementation):
+
+1. To work with Google Collab, go to the below URL 
+https://colab.research.google.com/ 
+
+2. Click on New Notebook icon
+
+3. Once created, click on "connect" option .
+
+### Google Collab notebook with code for reference :
+
+https://colab.research.google.com/drive/1tt_rVlq6_O8AWxHkFwiGYh1agPS11xlx?usp=sharing
+
+
+### In case you want to use Google API key, do the following :
+
+1. Go to Google AI Studio : 
+https://aistudio.google.com/prompts/new_chat
+
+2. In the left pane click on : "Get API Key".
+
+3. Once done, again scroll down and click on "Get API Key" option.
+
+4. Select project and copy paste.
+
+
+### Video link to help you with running code and understanding of Video Agent
+
+YouTube Link : https://youtu.be/sl3vxHwGDIo
+
+
+
+
+
